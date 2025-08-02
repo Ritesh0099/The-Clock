@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/timerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Countdown Timer"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Input Field for Minutes -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timerTitle"
+        android:layout_marginTop="32dp"
+        app:boxBackgroundColor="#1E1E1E"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxStrokeColor="#00FFAA">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputMinutes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter minutes"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            android:padding="14dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Countdown Display -->
+    <TextView
+        android:id="@+id/countdownText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="64sp"
+        android:textColor="#00FFAA"
+        android:layout_below="@id/inputLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Start Timer Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/startTimerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Timer"
+        android:layout_below="@id/countdownText"
+        android:layout_marginTop="50dp"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#1EB980"
+        app:cornerRadius="16dp"
+        android:textSize="16sp"
+        android:paddingVertical="14dp" />
+
+    <!-- Stop Timer Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/stopTimerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Timer"
+        android:layout_below="@id/startTimerButton"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#D32F2F"
+        app:cornerRadius="16dp"
+        android:textSize="16sp"
+        android:paddingVertical="14dp" />
+
+</RelativeLayout>
